@@ -1,4 +1,3 @@
-import { MapperService } from './shared/mapper.service';
 import { ConfigService } from './config/config.service';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -12,7 +11,7 @@ import { RoleModule } from './modules/role/role.module';
 @Module({
   imports: [ConfigModule, DatabaseModule, UserModule, RoleModule],
   controllers: [AppController],
-  providers: [MapperService, ConfigService, AppService],
+  providers: [ConfigService, AppService],
 })
 export class AppModule {
   static port: number | string;
